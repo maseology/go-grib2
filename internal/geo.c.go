@@ -427,7 +427,7 @@ func polar2ll(sec [][]unsigned_char, llat *[]double, llon *[]double) error {
 			}
 	*/
 	*llat = make([]double, nnpnts, nnpnts)
-	*llat = make([]double, nnpnts, nnpnts)
+	*llon = make([]double, nnpnts, nnpnts)
 
 	lat = *llat
 	lon = *llon

@@ -24,7 +24,16 @@ func GB2_Center(sec [][]unsigned_char) int {
 
 // #define GB2_Sec3_npts(sec)		uint4(sec[3]+6)
 func GB2_Sec3_npts(sec [][]unsigned_char) unsigned_int {
-	return uint4(sec[3][6:])
+	return uint4(sec[3][6:]) // uint4(sec[3]+6)
+}
+
+// #define GB2_Sec7_size(sec)		(sec[7] ? uint4(sec[7]+0) : 0)
+func GB2_Sec7_size(sec [][]unsigned_char) unsigned_int {
+	// return uint4(sec[3][6:]) // uint4(sec[3]+6)
+	if sec[7] == nil {
+		return 0
+	}
+	return uint4(sec[3][0:])
 }
 
 // #define GDS_Scan_y(scan)		((scan & 64) == 64)

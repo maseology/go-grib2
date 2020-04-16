@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/amsokol/go-grib2"
+	grib2 "github.com/amsokol/go-grib2"
 )
 
 func main() {
